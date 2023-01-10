@@ -8,6 +8,6 @@ model Attr {
 model Event {
   onChange: {
     checked: Boolean
-    nativeEvent: Ts @def("MouseEvent")
+    nativeEvent: Ts @def("Event")
   }
 }

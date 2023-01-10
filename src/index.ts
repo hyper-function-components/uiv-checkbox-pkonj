@@ -19,27 +19,22 @@ const HFC: HyperFunctionComponent = (container, initProps) => {
 
   function render(props: HfcProps) {
     const checked = props.attrs.checked;
-    // controlled
-    if (typeof checked !== "undefined") {
-      input.checked = checked;
+    const controlled = typeof checked === "boolean";
 
-      input.onclick = (e) => {
-        e.preventDefault();
-        setTimeout(() => {
-          props.events.onChange?.({
-            event: e,
-            checked: !checked,
-          });
-        });
-      };
-    } else {
-      input.onchange = (e) => {
-        props.events.onChange?.({
-          event: e,
-          checked: (e.target as HTMLInputElement).checked,
-        });
-      };
-    }
+    if (controlled) input.checked = checked;
+
+    input.onchange = function (e) {
+      let _checked = (e.target as HTMLInputElement).checked;
+      if (controlled) {
+        input.checked = checked;
+        _checked = !checked;
+      }
+
+      props.events.onChange?.({
+        event: e,
+        checked: _checked,
+      });
+    };
 
     if (props.attrs.name) {
       input.name = props.attrs.name;
