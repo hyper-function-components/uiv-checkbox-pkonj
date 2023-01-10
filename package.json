@@ -1,0 +1,21 @@
+{
+  "name": "uiv-checkbox-pkonj",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "",
+  "homepage": "https://uiverse.io/adamgiebl/proud-donkey-24",
+  "repository": "https://github.com/hyper-function-components/uiv-checkbox-pkonj",
+  "keywords": [],
+  "type": "module",
+  "scripts": {
+    "start": "hfcpack",
+    "build": "hfcpack build",
+    "publish-hfc": "hfcpack publish",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "hfcpack": "^2.0.13",
+    "hyper-function-component": "^2.1.2"
+  },
+  "banner": "/imgs/x_KkHOy51BU.png"
+}

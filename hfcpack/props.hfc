@@ -1,0 +1,13 @@
+model Attr {
+  name: String
+  checked: Boolean
+  defaultChecked: Boolean
+  size: Int
+}
+
+model Event {
+  onChange: {
+    checked: Boolean
+    nativeEvent: Ts @def("MouseEvent")
+  }
+}
