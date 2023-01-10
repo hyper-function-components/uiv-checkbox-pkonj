@@ -1,14 +1,6 @@
 ```hfz-view id=f5lq1r6561s
 <template hfz import:uiv-checkbox-pkonj="dev">
   <uiv-checkbox-pkonj :defaultChecked="true"></uiv-checkbox-pkonj>
-  <style>
-    #hfz-app {
-      height: 300px;
-      display: flex;
-      justify-content: center;
-      margin-top: 128px
-    }
-  </style>
 </template>
 
 ```
